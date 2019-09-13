@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Big Chonk</title>
-</head>
-<body>
+  <head>
 
-<h1>big chonk</h1>
-<p>gimme schmonk</p>
-<p>aaaaaaaaaaaaa</p>
-</body>
+    <title>uwu</title>
+
+    <style>
+      .navbar{
+        background-color: green;
+        overflow: hidden;
+      }
+
+      .navbar a{
+        color: black;
+        font-size: 24px;
+        text-decoration: none;
+        padding:16px;
+        float:left;
+      }
+
+      .navbar a:hover, .morelinks:hover{
+        background-color: blue;
+      }
+
+      .dropdown:hover .dropdown-content{
+        display:block;
+      }
+
+      .dropdown-content{
+        position: absolute;
+        z-index: 1;
+        display:none;
+        background-color:green;
+      }
+      .dropdown{
+          background-color:green;
+          color:white;
+          float:left;
+          text-decoration: none;
+          font-size:24px;
+      }
+      .dropdown-content a{
+          float:none;
+          display:block;
+      }
+      .morelinks{
+        color: black;
+        font-size: 24px;
+        text-decoration: none;
+        padding:16px;
+      }
+      
+
+
+
+    </style>
+
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="https://www.yahoo.com">Yahoo</a>
+      <a href="https://www.google.com">Google</a>
+      <a href="https://www.yahoo.com">Yahoo</a>
+      <div class="dropdown">
+        <div class="morelinks">More Links</div>
+        <div class="dropdown-content">
+          <a href="https://www.awseducate.com">AWS Educate</a>
+          <a href="https://www.collegeboard.org">College Board</a>
+          
+        </div>
+      </div>  
+
+    </div>
+
+  </body>
 </html>
