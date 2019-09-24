@@ -1,19 +1,19 @@
  .navbar{
     list-style: none;
     background-color: black;
-    overflow:hidden;
-    padding: 0;
+    overflow: hidden;
+    padding:0;
     }
     
     .navbar a, .dropdown div{
     text-decoration: none;
-    color:red;
+    color: red;
     font-size: 24px;
     padding: 16px;
     display: inline-block;
     }
     .navbar li{
-        float:left;
+        float: left;
     }
     .navbar li:hover{
         background-color:blue;
