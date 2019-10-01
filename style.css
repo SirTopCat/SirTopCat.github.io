@@ -4,7 +4,7 @@
     overflow: hidden;
     padding:0;
     }
-    
+
     .navbar a, .dropdown div{
     text-decoration: none;
     color: red;
@@ -35,4 +35,10 @@
     }
     .active{
         background-color:pink
+    }
+    .center{
+        text-align:center;
+    }
+    .janitorpupper{
+        background-image: url("janitordog.jpg");
     }
