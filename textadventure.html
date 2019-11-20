@@ -50,7 +50,6 @@
             top: 0px;
             left: 56%;
             right: 0px;
-            display: flex;
             align-items: center;
             justify-content: center;
             background-color: pink;
@@ -93,9 +92,9 @@
 
         <div id='rightpane'>
             <div id='storytext'>
-                <p id='ptext1'>It is the year 2019 when champion marathon runner, Rabbi Quartz Abraham, must set off on a quest to save her family. Mariel Hassani, a witch and rival competitor, kidnaps and transports R.Q.’s family into Minecraft, a video game set in which the player must build and survive against creatures such as skeletons, zombies, and spiders.</p>
-                <p id='ptext2'>Rabbi Quartz Abraham had beaten Mariel in a race back in last year’s Chicago Marathon and ever since- Mariel has held a grudge against Rabbi Quartz, and due to this year’s loss in the Chicago Marathon, Mariel seeks revenge by keeping her family hostage in a video game. R.Q., as the player, has to kill the Ender Dragon (the final boss) for their release.</p>
-                <p id='ptext3'>Through trials and tribulations, perhaps R.Q. Abraham will stop running away from her problems and face danger, or she will run straight to her demise.</p>
+                <p id='ptext1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p id='ptext2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p id='ptext3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p id='ptext4'></p>
             </div>
             <div id='choices'>
@@ -117,6 +116,7 @@
     var b2 = document.getElementById('b2');
     var b3 = document.getElementById('b3');
     var b4 = document.getElementById('b4');
+    var state = "intro";
     intro();
 
     function intro(){
@@ -135,14 +135,14 @@
     }
 
     function meetWitch(){
-        pic.src = "images/witch.jpg";
-        ptext1.innerHTML = "Hello, I have a spell to put on you.";
-        ptext2.innerHTML = "What would you like to do?";
+        pic.src = "weapons2.png";
+        ptext1.innerHTML = "In your search, you discover a letter. It reads, 'I've got your jorts, Cornelius. If you want them back, you'll have to fork over the Jelly Jewel.' -Gilbert the Great";
+        ptext2.innerHTML = "There's no way Gilbert is gonna keep your jorts or get the jewel. You've gotta go mess him up! But to do that, you'll need a weapon. Which combat will you use on your adventure?";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "";
-        b1.innerHTML = "Attack";
-        b2.innerHTML = "Run";
-        b3.innerHTML = "Stay";
+        b1.innerHTML = "Atomic Karate";
+        b2.innerHTML = "Sword of Deception";
+        b3.innerHTML = "Gun of Retribution";
         b1.style.display = "block";
         b2.style.display = "block";
         b3.style.display = "block";
