@@ -120,8 +120,8 @@
     intro();
 
     function intro(){
-        pic.src = "jojorts.jpg";
-        ptext1.innerHTML = "After a two or ten hour nap, you awake and find yourself jortless! What are you gonna do about it?";
+        pic.src = "images/jojorts.jpg";
+        ptext1.innerHTML = "After stealing the JoJorts, the jorts containing its own pocket dimension, you head home to your hut on an island in the middle of the Never Ever sea. Unfortunately for you, after awakening from your 10 hour beauty sleep, the JoJorts are missing! What is your first action?";
         ptext2.innerHTML = "";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "";
@@ -134,10 +134,10 @@
         
     }
 
-    function meetWitch(){
-        pic.src = "weapons2.png";
-        ptext1.innerHTML = "In your search, you discover a letter. It reads, 'I've got your jorts, Cornelius. If you want them back, you'll have to fork over the Jelly Jewel.' -Gilbert the Great";
-        ptext2.innerHTML = "There's no way Gilbert is gonna keep your jorts or get the jewel. You've gotta go mess him up! But to do that, you'll need a weapon. Which combat will you use on your adventure?";
+    function pickweapon(){
+        pic.src = "images/weapons2.png";
+        ptext1.innerHTML = "In your search, you discover a letter. It reads, 'Thanks for the jorts, Cornelius. Get off our island before we banish you into the history of never ever.' -Gilbert the Great";
+        ptext2.innerHTML = "There's no way Gilbert is gonna keep your jorts. You've gotta go mess him up! But to do that, you'll need a weapon. What is your weapon of choice?";
         ptext3.innerHTML = "";
         ptext4.innerHTML = "";
         b1.innerHTML = "Atomic Karate";
@@ -148,17 +148,53 @@
         b3.style.display = "block";
         b4.style.display = "none";
     }
-
+    function backtosleep(){
+        pic.src = "images/strawbed.png";
+        ptext1.innerHTML = "Going to sleep was the better option. Nothing to worry about when you're not awake, right?";
+        ptext2.innerHTML = "";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Wake up";
+        b2.innerHTML = "";
+        b1.style.display = "block";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        b4.style.display = "none";
+    }
+    function thefirstbaddies(){
+        pic.src = "images/menacingbaddies.png";
+        ptext1.innerHTML = "In the distance, you see a band of Gilbert's pirates, and they're completely unaware of you.";
+        ptext2.innerHTML = "Those losers are right in your path. How are you gonna deal with them?";
+        ptext3.innerHTML = "";
+        ptext4.innerHTML = "";
+        b1.innerHTML = "Sneak up on them";
+        b2.innerHTML = "Rush them head on";
+        b3.innerHTML = "Avoid them"
+        b1.style.display = "block";
+        b2.style.display = "block";
+        b3.style.display = "block";
+        b4.style.display = "none";
+        }
     //state machine
+    //make an end screen for going back to sleep
     function bclick(button){
         if(state == "intro"){
+            if (button == 2){
+                pickweapon();
+                state = "pickweapon";
+            }
+            else if(button == 1){
+                backtosleep();
+                state = "backtosleep";
+            }
+        }
+        else if(state == "backtosleep"){
             if (button == 1){
-                meetWitch();
-                state = "meetWitch";
+            intro();
+            state = "intro";
             }
-            else if(button == 2){
-                //Send them somewhere else
-            }
+            
+        
         }
         return false;
     }
